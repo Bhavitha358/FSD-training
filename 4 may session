@@ -1,0 +1,110 @@
+Agenda
+-- Installing python connector in the mysql work bench
+SQL Task:
+Question 1 - 
+Write the queries for the following tasks - 
+Create a database name - “Employee”.
+CREATE DATABASE EMPLOYEE;
+Create a table name - “Employee Details”. 
+CREATE TABLE EMPLOYEE_DETAILS (
+  Emp_id INT,
+  Emp_name VARCHAR(30),
+  Job_name VARCHAR(30),
+  Manager_id INT,
+  Hire_date DATE,
+  Salary INT,
+  Dep_id INT
+  );
+Insert 10 details in the “Employee Details” table  - 
+Emp_id
+Emp_name
+Job_name
+Manager_id
+Hire_date
+Salary
+Dep_id
+INSERT INTO EMPLOYEE_DETAILS VALUES (3351,"Rachael","Developer",801,'2002-01-01',800000,6053), 
+(3353,"Rachael","Developer",801,'2002-01-01',800000,6053),(3352,"Divya","Developer",803,'2002-05-19',300000,0953),
+(3378,"gaurav","Program Analyst",803,'2012-09-01',150000,9053),(3373,"Shruthi","Program Analyst",803,'2002-07-01',1200000,4053),
+(3367,"Krystal","Data Engineer",809,'2002-01-01',900000,8903),(3301,"Raghav","Data Engineer",801,'2002-01-01',190000,6653),
+(3320,"Hrithi","Tester",801,'2001-08-12',900000,6903),(3367,"Elene","Tester",801,'2002-01-11',900000,6753),
+(3327,"Raj","Developer",801,'2002-01-09',600000,7153);
+
+SELECT * FROM EMPLOYEE_DETAILS;
+Sample Output - 
+
+emp_id | emp_name | job_name  | manager_id | hire_date  | salary  | dep_id
+--------+----------+-----------+------------+------------+---------+----------+---------+-----------
+68319 |   Mr. Singh  |   PRESIDENT |      68319      | 1991-11-18 | 6000 |  1001
+
+Find the salaries of all the employees from the “Employee Details” table.
+SELECT SALARY FROM EMPLOYEE_DETAILS;
+Find the unique designations of the employees from the table.
+SELECT DISTINCT (Job_name) FROM EMPLOYEE_DETAILS;
+Change the salary where the emp_name is “Raj”.
+UPDATE EMPLOYEE_DETAILS SET Salary = 8000000 WHERE emp_name = 'Raj';
+
+
+
+Question 2 - 
+ 	Write the queries for the following tasks - 
+Create a database name - “Football”.
+Create a table name - “Football Venue”.
+Insert 10 details in the “Football Venue” table  - 
+venue_id
+venue_name
+city_id
+capacity
+Sample Output - 
+ venue_id |       venue_name        | city_id | capacity
+-------------+-----------------------------+----------+----------
+    20001 |             France               |   10003 |  42115
+
+		  4. Count the number of venues of the football world cup
+		  5. List all the venue names and capacities in the format of “Location” and “Volume”.
+
+Sample Output - 
+  Location        | Volume
+------------------+----------
+    Argentina   |   100034
+   Spain           |   272726
+
+		
+6. Delete all the details where venue_name is equal to “Australia” 
+
+
+
+
+SQL WITH PYTHON:
+First step is to connect python connector using mysqlclient.
+If the mysqlclient does't exist in the sysytem then install mysqlclient in the terminal using the following commands:
+python -m pip install mysqlclient
+python -m pip install mysql-connector-python
+python -m pip install pymysql
+
+after connecting with python
+MYSQL Command Line Client
+
+Create a folder "SQL_PYTHON" and create a python file 'coonection.py' in visual studio code.
+code :
+import mysql.connector
+mydb = mysql.connector.connect(host = 'localhost', user = 'root', password = 'Bhavi@mysql358')
+print(mydb.connection_id)
+
+In terminal :
+python connection.py
+
+Create a new file 'create_db.py' in visual studio code
+import mysql.connector
+mydb = mysql.connector.connect(host = 'localhost', user = 'root', password = 'Bhavi@mysql358')
+print(mydb.connection_id)
+cur=mydb.cursor()
+cur.execute('create database BHAVITHA')
+
+In terminal :
+python create_db.py
+In mysqlcommandlineclient :
+show databases
+
+
+
