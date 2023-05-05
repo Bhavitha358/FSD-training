@@ -1,0 +1,20 @@
+Java
+
+
+Why Java?
+History of Java
+Features of Java:
+--> Java is a simpler programming language , it doesn't contain any complex such as pointers 
+      Disadvantages Of Pointers:
+          Pointers are ambiguous
+          Improper use of pointers can crash the code
+--> Java is an object oriented programming language.
+Question: Is java a purely object-oriented language?
+Ans : Yes, Java is an object oriented programming language but it is not purely object oriented. To say a language to be a purely object oriented language, it must contain 
+only classes and objects , and must not contain PRIMITIVE datatypes. But java contains both primitive datatypes and also objects and classes. So java is not a purely 
+object oriented language.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is JVM?
+      JVM is the Java Virtual Machine. It is heart of the Java execution process.
+          
+          
